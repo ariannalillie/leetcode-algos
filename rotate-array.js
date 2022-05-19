@@ -13,4 +13,4 @@ const rotate = (nums, k) => {
 
 const nums = [-1, -100, 3, 99];
 const k = 2;
-console.log(rotate(nums, k)); // Output: [5,6,7,1,2,3,4]
+console.log(rotate(nums, k)); // Output: [99,-1,-100,3]
