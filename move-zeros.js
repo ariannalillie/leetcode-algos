@@ -3,7 +3,9 @@
 // DO THIS IN PLACE
 
 const moveZeros = (nums) => {
-    return nums
+    return nums.sort((a, b) => {
+        if(b === 0) return -1
+    })
 }
 
 const nums = [0,1,0,3,12]
