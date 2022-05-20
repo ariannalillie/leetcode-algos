@@ -1,7 +1,8 @@
 const calPoints = (ops) => {
     const pointsArr = [];
+    const regex = new RegExp(".*\\d+.*")
     for (let i = 0; i < ops.length; i++) {
-        if (typeof pointsArr[i] === 'number') {
+        if (regex.test(pointsArr[i])) {
             pointsArr.push(pointsArr[i])
         }
     }
