@@ -1,6 +1,10 @@
 const twoSum = (numbers, target) => {
   const idxArr = [];
 
+  for (let i = 0; i < numbers.length - 1; i++) {
+      console.log(numbers[i], numbers[i + 1])
+  }
+
   return idxArr;
 };
 
