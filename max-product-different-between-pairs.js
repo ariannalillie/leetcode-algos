@@ -1,5 +1,6 @@
 const maxProducrDifference = (nums) => {
-
+    nums.sort((a,b) => a-b);
+    return Math.abs((nums[0] * nums[1]) - (nums[nums.length-1] * nums[nums.length-2]))
 };
 
 const nums = [5,6,2,7,4]
