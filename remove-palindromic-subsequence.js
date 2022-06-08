@@ -1,5 +1,5 @@
 const removePalindromeSub = (s) => {
-
+   return s == '' ? 0 : s == [...s].reverse().join('') ? 1 : 2;
 }
 
 const s = "ababa"
