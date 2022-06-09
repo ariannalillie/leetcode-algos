@@ -3,15 +3,6 @@ const mergeSortedArray = (nums1, m, nums2, n) => {
 //   const slicedArr2 = nums2.slice(0, n);
 //   return [...slicedArr1, ...slicedArr2].sort()
 
-// for (let i = 0; i < m; i++) {
-//     nums1.pop();
-// }
-// for (let i = 0; i < n; i++) {
-//     nums1.push(nums2[i]);
-// }
-
-// return nums1.sort();
-
 nums1.splice(m, m+n,...nums2);
 return nums1.sort((a,b) => a-b);
 };
