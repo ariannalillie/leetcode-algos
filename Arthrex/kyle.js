@@ -5,6 +5,7 @@ const pipedMetadata = (duration, language, date, referenceNumber) => {
   data.forEach((el) => {
     el ? (piped += `${el} | `) : "";
   });
+  
   return piped.slice(0, piped.length - 3);
 };
 
