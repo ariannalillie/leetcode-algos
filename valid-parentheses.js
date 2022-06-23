@@ -8,5 +8,5 @@ const isValid = (s) => {
   return true;
 };
 
-const s = "(]"
+const s = "{[]}"
 console.log(isValid(s)); // Output: true
