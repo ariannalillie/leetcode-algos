@@ -16,3 +16,17 @@ const singleNumber = (nums) => {
 
 const nums = [2, 2, 1];
 console.log(singleNumber(nums)); // Output: 1
+
+// Alternate Soluction
+const singleNumber2 = (nums) => {
+  let numsSet = new Set();
+
+  nums.forEach((num) => {
+    if (numsSet.has(num)) {
+      numsSet.delete(num);
+    } else {
+      numsSet.add(num);
+    }
+  });
+  return Array.from(numsSet).join(",");
+};
