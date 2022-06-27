@@ -22,11 +22,7 @@ const singleNumber2 = (nums) => {
   let numsSet = new Set();
 
   nums.forEach((num) => {
-    if (numsSet.has(num)) {
-      numsSet.delete(num);
-    } else {
-      numsSet.add(num);
-    }
+    numsSet.has(num) ? numsSet.delete(num) : numsSet.add(num);
   });
   return Array.from(numsSet).join(",");
 };
