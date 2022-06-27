@@ -18,18 +18,6 @@ const wordBreak = (s, wordDict) => {
   return matchingWords === wordDict.length;
 };
 
-// const newDict = {}
-// const stringArr = s.split('')
-// wordDict.forEach((word) => {
-// newDict[word] = word
-// })
-// let currentString = ''
-// while(stringArr.length) {
-
-// currentString += stringArr.shift()
-// if (newDict[currentString]) {
-// currentString = ''
-// }
 
 const s = "leetcode";
 const wordDict = ["leet", "code"];
