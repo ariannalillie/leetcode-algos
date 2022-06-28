@@ -1,8 +1,9 @@
 const minDelete = (s) => {
-
+    let sortedString = s.split('').sort();
+    console.log(sortedString)
 };
 
-const s = "aaabbbcc"
+const s = "ceabaacb"
 console.log(minDelete(s)) // Output: 2
 // Explanation: You can delete two 'b's r
 // esulting in the good string "aaabcc".
