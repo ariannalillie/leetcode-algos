@@ -16,6 +16,6 @@ const isPlaindrome = (s) => {
   return reverseString == noSpecialChars;
 };
 
-const s = "ab_a";
+const s = "A man, a plan, a canal: Panama";
 console.log(isPlaindrome(s)); // Output: true
 // Explanation: "amanaplanacanalpanama" is a palindrome.
