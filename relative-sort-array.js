@@ -1,6 +1,5 @@
 const relativeSortArray = (arr1, arr2) => {
   let sortedArray = [];
-  let extras = new Set(arr1);
 
   let idx = 0;
 
@@ -9,15 +8,22 @@ const relativeSortArray = (arr1, arr2) => {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] === curr) {
         sortedArray.push(arr1[i]);
-        if (extras.has(arr1[i])) {
-          extras.delete(arr1[i]);
-        }
+        arr1[i] = "-";
       }
     }
     idx = idx += 1;
   }
 
-  const sortedExtras = Array.from(extras).sort((a, b) => a - b);
+  let extras = [];
+  let thing = arr1
+    .join(" ")
+    .replaceAll(/-/g, "")
+    .replace(/ +(?= )/g, "")
+    .split(" ");
+  thing.forEach((el) => {
+    if (el) extras.push(+el);
+  });
+  const sortedExtras = extras.sort((a, b) => a - b);
   return [...sortedArray, ...sortedExtras];
 };
 
