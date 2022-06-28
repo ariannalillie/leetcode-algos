@@ -1,14 +1,17 @@
 const reformatDate = (date) => {
   const dateArray = date.split(" ");
-  const day = dateArray[0].replaceAll(/[a-zA-Z]+/g, "");
-  const month = dateArray[1];
+  let day = dateArray[0].replaceAll(/[a-zA-Z]+/g, "");
+  let month = dateArray[1];
   const year = dateArray[2];
 
   const newDate = new Date(`${day} ${month} ${year}`);
-  const formattedDay = day < 10 ? `0${day}`: day
-  const formattedMonth = (newDate.getMonth() + 1) < 10 ? `0${(newDate.getMonth() + 1)}`: (newDate.getMonth() + 1)
+  day = day < 10 ? `0${day}` : day;
+  month =
+    newDate.getMonth() + 1 < 10
+      ? `0${newDate.getMonth() + 1}`
+      : newDate.getMonth() + 1;
 
-  return year + "-" + formattedMonth + "-" + formattedDay;
+  return year + "-" + month + "-" + day;
 };
 
 const date = "6th Oct 2052";
