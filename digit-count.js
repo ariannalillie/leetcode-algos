@@ -1,5 +1,6 @@
 const digitCount = (num) => {
-  numsCount = {};
+  let boolArr = [];
+  let numsCount = {};
   numsArr = num.split("");
   numsArr.forEach((n) => {
     if (numsCount[n]) {
@@ -10,14 +11,19 @@ const digitCount = (num) => {
   });
 
   numsArr.forEach((n, idx) => {
-    if (!(numsCount[idx] == n)) {
-      console.log("true");
+    if (numsCount[idx] == n) {
+      boolArr.push(true);
     } else if (!numsCount[idx]) {
       if (0 == n) {
-        console.log("true but doesnt exist");
+        boolArr.push(true);
+      } else {
+        boolArr.push(false);
       }
+    } else {
+      boolArr.push(false);
     }
   });
+  return boolArr.every((value) => value === true);
 };
 
 const num = "1210";
