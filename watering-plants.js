@@ -1,10 +1,23 @@
 const wateringPlants = (plants, capacity) => {
+  count = 0;
+  currentCapacity = capacity;
 
-}
+  for (let i = 0; i < plants.length; i++) {
+    if (currentCapacity < plants[i]) {
+      count += i;
+      count += i;
+      currentCapacity = capacity;
+    }
+    count += 1;
+    currentCapacity -= plants[i];
+    console.log(count);
+  }
+  return count;
+};
 
-const plants = [2,2,3,3]
-const capacity = 5
-console.log(wateringPlants(plants, capacity)) // Output: 14
+const plants = [2, 2, 3, 3];
+const capacity = 5;
+console.log(wateringPlants(plants, capacity)); // Output: 14
 // Explanation: Start at the river with a full watering can:
 // - Walk to plant 0 (1 step) and water it. Watering can has 3 units of water.
 // - Walk to plant 1 (1 step) and water it. Watering can has 1 unit of water.
