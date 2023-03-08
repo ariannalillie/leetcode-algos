@@ -4,13 +4,11 @@ const wateringPlants = (plants, capacity) => {
 
   for (let i = 0; i < plants.length; i++) {
     if (currentCapacity < plants[i]) {
-      count += i;
-      count += i;
+      count += i * 2;
       currentCapacity = capacity;
     }
     count += 1;
     currentCapacity -= plants[i];
-    console.log(count);
   }
   return count;
 };
