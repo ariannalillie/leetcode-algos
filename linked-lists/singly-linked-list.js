@@ -64,6 +64,29 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+  // Get takes an index and returns the value at that index
+  get(index) {
+    let counter = 0;
+    let curr = this.head;
+    // Guard clause
+    if (index < 0 || index >= this.length) return null;
+
+    while (counter !== index) {
+      counter++;
+      curr = curr.next;
+    }
+    return curr;
+  }
+  // Set takes an index and a value and updates the value at that index
+  set(index, value) {
+    const foundNode = this.get(index);
+
+    if (foundNode) {
+      foundNode.val = value;
+      return true;
+    }
+    return false;
+  }
 }
 
 let firstList = new SinglyLinkedList();
@@ -71,10 +94,5 @@ firstList.push("1");
 firstList.push("2");
 firstList.push("3");
 firstList.push("4");
-firstList.push("5");
 console.log(firstList);
-firstList.pop();
-firstList.pop();
-firstList.pop();
-firstList.pop();
-console.log(firstList);
+console.log("I got", firstList.set(1, 6));
