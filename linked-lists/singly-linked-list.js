@@ -114,6 +114,7 @@ class SinglyLinkedList {
     this.length--;
     return removed.val;
   }
+  // Reverse reverses the linked list in place
   reverse() {
     let curr = this.head;
     this.head = this.tail;
@@ -127,7 +128,7 @@ class SinglyLinkedList {
       prev = curr;
       curr = next;
     }
-    return this
+    return this;
   }
 }
 
