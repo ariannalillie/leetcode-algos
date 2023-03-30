@@ -1,5 +1,16 @@
 const leftRightDifference = (nums) => {
-    
+  let leftSum = [];
+
+  nums.forEach((_, index) => {
+    const numsToAdd = nums.slice(0, index);
+    let numToAdd = 0;
+    numsToAdd.forEach((n) => {
+      numToAdd += n;
+    });
+    leftSum.push(numToAdd);
+  });
+
+  return leftSum;
 };
 
 const nums = [10, 4, 8, 3];
