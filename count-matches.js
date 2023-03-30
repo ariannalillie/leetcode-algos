@@ -1,7 +1,6 @@
 const countMatches = (items, ruleKey, ruleValue) => {
-  let ruleKeys = ["type", "color", "name"];
   let count = 0;
-  ruleIndex = ruleKeys.indexOf(ruleKey);
+  ruleIndex = ["type", "color", "name"].indexOf(ruleKey);
 
   items.forEach((item) => {
     if (item[ruleIndex] === ruleValue) count++;
