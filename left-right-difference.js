@@ -1,6 +1,9 @@
 const leftRightDifference = (nums) => {
   let leftSum = [];
+  let rightSum = [];
+  let difference = [];
 
+  // populate left sum array
   nums.forEach((_, index) => {
     const numsToAdd = nums.slice(0, index);
     let numToAdd = 0;
@@ -10,7 +13,21 @@ const leftRightDifference = (nums) => {
     leftSum.push(numToAdd);
   });
 
-  return leftSum;
+  // populate right sum array
+  nums.forEach((_, index) => {
+    const numsToAdd = nums.slice(index + 1);
+    let numToAdd = 0;
+    numsToAdd.forEach((n) => {
+      numToAdd += n;
+    });
+    rightSum.push(numToAdd);
+  });
+
+  for (let i = 0; i < nums.length; i++) {
+    difference.push(Math.abs(leftSum[i] - rightSum[i]));
+  }
+
+  return difference;
 };
 
 const nums = [10, 4, 8, 3];
