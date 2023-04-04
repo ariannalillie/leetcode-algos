@@ -1,17 +1,18 @@
 const pivotIndex = (nums) => {
   let leftSum = 0;
-  for (let i = 0; i < nums.length - 1; i++) {
+  for (let i = 0; i < nums.length; i++) {
     leftSum += nums[i];
     let rightSum = 0;
     for (let j = i; j < nums.length; j++) {
       rightSum += nums[j];
     }
+    console.log(leftSum, rightSum)
     if (leftSum === rightSum) return i;
   }
   return -1;
 };
 
-const nums = [1, 7, 3, 6, 5, 6];
+const nums = [-1,-1,0,1,1,0];
 console.log(pivotIndex(nums)); // Output: 3
 // Explanation:
 // The pivot index is 3.
