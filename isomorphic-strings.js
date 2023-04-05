@@ -15,8 +15,12 @@ const isIsomorphic = (s, t) => {
     if (tMap[tChar] == undefined) {
       tMap[tChar] = sChar;
     }
+
+    if (sMap[sChar] != tChar || tMap[tChar] != sChar) {
+      return false;
+    }
   }
-  return Object.keys(sMap).length === Object.keys(tMap).length;
+  return true;
 };
 
 const s = "egg";
