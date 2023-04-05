@@ -1,5 +1,22 @@
 const isIsomorphic = (s, t) => {
-    
+  if (s.length !== t.length) return false;
+
+  let sMap = {};
+  let tMap = {};
+
+  for (let i = 0; i < s.length; i++) {
+    let sChar = s[i];
+    let tChar = t[i];
+
+    if (sMap[sChar] == undefined) {
+      sMap[sChar] = tChar;
+    }
+
+    if (tMap[tChar] == undefined) {
+      tMap[tChar] = sChar;
+    }
+  }
+  return Object.keys(sMap).length === Object.keys(tMap).length;
 };
 
 const s = "egg";
