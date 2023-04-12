@@ -24,5 +24,4 @@ let secondStudent = new Student("Sonu", "Mori", 5);
 
 firstStudent.markLate();
 firstStudent.markLate();
-firstStudent.markLate();
 console.log(firstStudent);
