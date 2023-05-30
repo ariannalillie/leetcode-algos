@@ -8,14 +8,14 @@ const binarySearch = (sortedArr, val) => {
     if (val === sortedArr[middle]) {
       return middle;
     } else if (val > sortedArr[middle]) {
-      left = middle;
+      left = middle + 1;
       middle = Math.floor((right + left) / 2);
     } else {
-      right = middle;
-      middle = Math.floor(right / 2);
+      right = middle -1;
+      middle = Math.floor((right + left) / 2);
     }
   }
   return -1;
 };
 
-console.log(binarySearch([1,2,3,4,5,6], 5))
+console.log(binarySearch([1,2,3,4,5,6], 6))
